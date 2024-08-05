@@ -1,5 +1,5 @@
 ---
-title: "Belajar NextJS"
+title: "Belajar NextJS New"
 image: "/images/user.png"
 description: "lorem ipsum dolor sit amet"
 ---

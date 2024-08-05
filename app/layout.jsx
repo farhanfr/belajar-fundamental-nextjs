@@ -3,12 +3,18 @@ import './global.css'
 
 import Navbar from '@/components/Navbar'
 
+export const metadata = {
+    title: {
+        default: "Situs next JS",
+        template: "%s | Situs next JS"
+    },
+    description: "Kumpulan materi nextjs"
+}
+
+
 export default function Layout({ children }) {
     return (
         <html lang="en" className={roboto.variable}>
-            <head>
-                <title>Learn next.js fundamental</title>
-            </head>
             <body className="bg-gray-50 flex flex-col px-4 py-4 min-h-screen">
                 <header>
                     <Navbar/>
