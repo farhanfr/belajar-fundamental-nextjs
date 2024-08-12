@@ -11,8 +11,8 @@ export async function getPost(slug) {
 }
 
 export async function getAllPost() {
-    const files = await readdir("content/blog")
-    const slugs = files.filter((file) => file.endsWith('.md')).map((file)=>file.slice(0,-".md".length))
+  
+    const slugs = await getSlugs()
 
     const posts = []
 
@@ -22,4 +22,9 @@ export async function getAllPost() {
     }
 
     return posts
+}
+
+export async function getSlugs(slug) {
+    const files = await readdir("content/blog")
+    return files.filter((file) => file.endsWith('.md')).map((file)=>file.slice(0,-".md".length))
 }
